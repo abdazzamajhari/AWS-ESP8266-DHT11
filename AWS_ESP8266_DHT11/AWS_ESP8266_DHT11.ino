@@ -8,12 +8,12 @@ extern "C" {
 #include "libb64/cdecode.h"
 }
 
-const char* ssid = "Ruang Rapat";
-const char* password = "b55nj4y4";
+const char* ssid = " ";
+const char* password = " ";
 
 // Find this awsEndpoint in the AWS Console: Manage - Things, choose your thing
 // choose Interact, its the HTTPS Rest endpoint 
-const char* awsEndpoint = "a2oh157fnrxmkx-ats.iot.us-east-1.amazonaws.com";
+const char* awsEndpoint = " ";
 
 // For the two certificate strings below paste in the text of your AWS 
 // device certificate and private key, comment out the BEGIN and END 
@@ -23,54 +23,54 @@ const char* awsEndpoint = "a2oh157fnrxmkx-ats.iot.us-east-1.amazonaws.com";
 // xxxxxxxxxx-certificate.pem.crt
 const String certificatePemCrt = \
 //-----BEGIN CERTIFICATE-----
-"MIIDWjCCAkKgAwIBAgIVAKQh0qnRbj3NyEfQtMFu60o0EgztMA0GCSqGSIb3DQEB" \
-"CwUAME0xSzBJBgNVBAsMQkFtYXpvbiBXZWIgU2VydmljZXMgTz1BbWF6b24uY29t" \
-"IEluYy4gTD1TZWF0dGxlIFNUPVdhc2hpbmd0b24gQz1VUzAeFw0yMTAyMTgwMTQ0" \
-"MDZaFw00OTEyMzEyMzU5NTlaMB4xHDAaBgNVBAMME0FXUyBJb1QgQ2VydGlmaWNh" \
-"dGUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLm6yFW48tn1QvPZQa" \
-"pBcasKAlkPqj+njyKKS1jPrXFQxfIJxGYAiiHN3ZDut6gMyzJlAU96j192New1/c" \
-"roLjiwuqV6gKwSk8fMhZqxmKP6MEJb/IOTe8p0I88jQ3ba94UC862txaAYIVd9Fm" \
-"3PrJweRfAoRL93e+tErQqItmT1Lm5CF46wRoF4iUL4bikAc1w8FejaQgErcUM5PD" \
-"Byf1yB/sW3Ddy5SshHFU5a+NFBVRPDN7EuI9IyeVC1wSY0l0Xjf4a3JVHR2/CdCE" \
-"w3C5rMzmDghvQMnKj3rgG/SGd4QXRq7MMQRIirr9oOVSjl5hqapdKOfAkoKNUIzu" \
-"zJJ3AgMBAAGjYDBeMB8GA1UdIwQYMBaAFAsbh3LN4zdlH7MHCjU0KjFG3THLMB0G" \
-"A1UdDgQWBBSALEuOy+hWvDpUxYemaHy8zMBQUzAMBgNVHRMBAf8EAjAAMA4GA1Ud" \
-"DwEB/wQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAw4nNAsSj5VyuwdVy80+jjhDP" \
-"vU0YkHWSubvabcT4Ci/ejEyXK9eqf98acrw+w0LjdK/Ydf4V+9ybILY8OamKuY4w" \
-"KWQ97EQ11ML3L7PQa8eRrt7uJzL3CoWAkBGByR1b8D2jVP3Yk53P1M3joL/WApDy" \
-"/OFR+Goy3O4hI7LPjKY0Oge3rXxAlzi0GLt5MNJynHE9q57/78gp6RR6BSUu5sDF" \
-"RpoP8ANzhMuFK4tvlFm2RcO/RBQ65IlSHnuallghriTrX2UaRa8nyyKll0hmQmPN" \
-"Wc7iFJ4emeCLH3L9bdNPFvCPafrHJCSQiXiok0k7o20/A9cBtKJbGfWfZiGAMQ=="; 
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" "; 
 //-----END CERTIFICATE-----
 
 // xxxxxxxxxx-private.pem.key
 const String privatePemKey = \
 //-----BEGIN RSA PRIVATE KEY-----
-"MIIEowIBAAKCAQEAy5ushVuPLZ9ULz2UGqQXGrCgJZD6o/p48iiktYz61xUMXyCc" \
-"RmAIohzd2Q7reoDMsyZQFPeo9fdjXsNf3K6C44sLqleoCsEpPHzIWasZij+jBCW/" \
-"yDk3vKdCPPI0N22veFAvOtrcWgGCFXfRZtz6ycHkXwKES/d3vrRK0KiLZk9S5uQh" \
-"eOsEaBeIlC+G4pAHNcPBXo2kIBK3FDOTwwcn9cgf7Ftw3cuUrIRxVOWvjRQVUTwz" \
-"exLiPSMnlQtcEmNJdF43+GtyVR0dvwnQhMNwuazM5g4Ib0DJyo964Bv0hneEF0au" \
-"zDEESIq6/aDlUo5eYamqXSjnwJKCjVCM7sySdwIDAQABAoIBACEjAt7pWdII/kB5" \
-"+yKi1gfH+yhiAgix+QEgUD4j5acfi9Xnjsd9VapcnFZ5MSXM1IPLlnjzHZJ6YrfH" \
-"gFCALlkuBgYBIh4t9bIcdNbzG8L+PF+ubRn/Be00I3mbyZfDyC0Cj806VWZonG02" \
-"BOSCzmYLokk8NZ/PdLOa0BpJc/aAZBuEcbj4svWrfQtCOccV1fOJMO2SaA5LylGq" \
-"IEXzj/+KnDZB2flOk5aMa49QbBmKSThMXJ2AQZh9DSDrldNEP7E9SkGfLxpBqLKW" \
-"Nfoy9mb/kpHA+jvc7qmtqIlqEL2jlOsWQpYKMIPAjgwkj/GWijQsRurHEmwqGVXq" \
-"cizioOECgYEA6vCDsSkDfuQ8gnqWVlEgFTz/TG7xOsLBIH6+xMKnnNWbJqDQnueW" \
-"8bX5DkKA+B3v9Dz7GDWNj9yaRmlJ8vckHK66i67sFXqK6WrPqt43F68cVvn2yj0p" \
-"N33NOmaE4dMQn3tbSIYxjhcXAOpPOLS6Gr+DmYYYaVPb4o74ITJ5qp8CgYEA3dwn" \
-"YaMhp6LnGnu760SwlJKvhC7AOxKhNd7wLYR7Pg3rgO5FWrHJwqqB7YTVP+hW5ezm" \
-"4xA3b0HMF8yMZbnMhU1FsfpCC6Vp2+bOdnpQnh5XlmNv56BHaviBfZrjxzL8dPxs" \
-"3xb7/f68N1i3fI/ZQvG544xGqRHUyGlltyoWYSkCgYEA6ieIuXttFn0XqdvQFnuI" \
-"hGJk+KLiHnSY03A/Zg+zymZC2j8Rbi7XjFSXw5SYwbHkxAI7KCfHzYhK4r5xi4yy" \
-"GzwyhKF0fvvBk153V49eTWaj0jQTugE3IS1q7DfdXM1mFe12T1Qf88Qjky/0gUnu" \
-"6lXSLaMulVuVHbrspvmNtXUCgYA02A1hSjPn8/tL6ZD3FuNgYBgCSghriaJwbGuU" \
-"y+t2+mXPzfEjCxndjjNoWa1ZjYO1PFo6V1B85ZUxTf1a9Yhrb95b6Bn3IC04vZ8L" \
-"xVKSdvOx1HmBGEIqjop5Wn1KozBSxRVBhf37n8NBA5agyrqbIWx/cJgcCS0/lyst" \
-"F49BEQKBgFVVT8P1NDCpREI9peR147pw67F7w/ULIPX4mhrZrMgDIqelGDfbp7Bn" \
-"OEUNeJavIE1YXbmZW2gO7vQAWmTflw83y4zC2bv4DAsUJKT7nkZC6V946BSVhGJ6" \
-"SMKOQacXitOOLzKv5uG7noMpBuUPOcaE8L0JvNuOz7KKjK7J10E3";
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" " \
+" ";
 //-----END RSA PRIVATE KEY-----
 
 // This is the AWS IoT CA Certificate from: 
@@ -156,7 +156,7 @@ void loop() {
    pubSubCheckConnect();
 
   if (millis() - lastPublish > 10000) {
-    String msg = String("Temperature sensor: ") +tem + "°C >>> Humidity is " +hum + "%" + ++msgCount;
+    String msg = String("Temperature sensor: ") +tem + "°C >>> Humidity is " +hum + "% " + "count: " + ++msgCount;
     pubSubClient.publish("outTopic", msg.c_str()); //outTopic as a MQTT Client Test
     Serial.print("Published: "); Serial.println(msg);
     lastPublish = millis();
